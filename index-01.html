@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="_css/estyle.css">
+    <script src="_js/index.js"></script>
+    <title>Aprendendo Java Script Brincando</title>
+    
+</head>
+<body>
+
+    <h1>Vamos entender JavaScript usando uma lâmpada?</h1>
+
+    <div id="imagens">
+    <img  src="_imagens/lampada-apagada.jpg" id="Luz"
+          onmousemove="mudaLampada(1)"
+          onmouseout="mudaLampada(2)"
+          onclick="mudaLampada(3)"
+          />
+
+    <img src="_imagens/resetar.jpg" id="myImage" onClick="history.go(0)"  width="200" height="200"/>
+    </div>
+    <p>Nesse projeto temos objetivo de executar algumas ações que são:</p>
+    <li>Inicialmente está apagada</li>
+    <li>Quando passarmos o mouse ela acenderá</li>
+    <li>Quando clicar a lâmpada irá quebrar</li>
+    <li>E por fim, ao clicar no ícone de atualizar iremos reiniciar as ações</li>
+
+    <p>Para isso usei o Javascript para executar essas ações usando condicionais que teve como resultado a estrutura abaixo</p>
+
+    <div id="codigo">
+    <p>var quebrada = false; <br>
+        function mudaLampada(tipo) {<br>
+        if (tipo == 1) {<br>
+        arquivo = "_imagens/Lampada-acesa.jpg";<br>
+        } <br>
+        if (tipo == 2) {<br>
+        arquivo ="_imagens/lampada-apagada.jpg";<br>
+        }<br>
+        if (tipo == 3) {<br>
+        arquivo = "_imagens/lampada-quebrada.jpg";<br>
+        } <br>
+        if (!quebrada) {<br>
+        document.getElementById("Luz").src = arquivo;<br>
+        if (tipo ==3) {<br>
+            quebrada = true;<br>
+            }<br>
+        }<br>
+        };<br>
+    </p>
+    </div>
+
+    <p>Para ter acesso ao projeto completo acesse <a href="https://github.com/Cintia-97/Project_lamp" target="_blank">Cintia-97/Project_lamp</a>  </p>
+
+
+</body>
+</html>
